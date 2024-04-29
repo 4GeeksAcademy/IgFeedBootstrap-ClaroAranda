@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" crossorigin="anonymous">
+
+    <title>Instagram Feed con Bootstrap</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-4" href="#">
+                    <i class="fa-brands fa-instagram ms-3"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <form class="d-flex">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Create a new post
+                    </button>                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                
+                                <div class="modal-body">
+                                    <label class="fw-bold" for="floatingTextarea2">Caption:</label>
+                                    <textarea class="form-control" placeholder="Add the caption of your post here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                    <button class="mt-2" type="button" style="border: none;"><i class="fa-solid fa-camera"></i></button>
+                                    <button class="mt-2" type="button" style="border: none;"><i class="fa-solid fa-location-dot"></i></button>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown ms-2">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+          </nav>
+
+        <div class="row mt-3 px-2">
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-tab-pane" type="button"
+                  role="tab" aria-controls="grid-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells p-1"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="post-tab" data-bs-toggle="tab" data-bs-target="#post-tab-pane" type="button"
+                  role="tab" aria-controls="post-tab-pane" aria-selected="false"><i class="fa-solid fa-square p-1"></i></button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="grid-tab-pane" role="tabpanel" aria-labelledby="grid-tab" tabindex="0">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-4 col-sm-12 p-1"><img src="https://media.graphassets.com/resize=height:404,width:1280/output=format:webp/6wFiLOP4QFmgLubA1IaM?width=1280" width="100%" height="300px" alt="Labrador con Shar Pei"></div>
+                        <div class="col-md-4 col-sm-12 p-1"><img src="https://nortempo.com/wp-content/uploads/fundacion_personas-1140x760.jpg" width="100%" height="300px" alt="After con amigos"></div>
+                        <div class="col-md-4 col-sm-12 p-1"><img src="https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/mctpahuiyc1gpunvp8s1" width="100%" height="300px" alt="Paseo por Ushuaia"></div>
+                        <div class="col-md-4 col-sm-12 p-1"><img src="https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/63b5cc1f-311b-4a2a-bb2a-8b650dd61994/smartphone/hero-cerificacion-bancaria-mob.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P864E0Q30449MS3000-63b5cc1f-311b-4a2a-bb2a-8b650dd61994-smartphone-ozumTn9" width="100%" height="300px" alt="Saliendo de la oficina"></div>
+                        <div class="col-md-4 col-sm-12 p-1"><img src="https://i.pinimg.com/originals/4f/49/b4/4f49b42e7f38dba45f543246dca08ede.jpg" width="100%" height="300px" alt="Costanera de Corrientes"></div>
+                        <div class="col-md-4 col-sm-12 p-1"><img src="https://image.ondacero.es/clipping/cmsimages01/2023/06/13/D2A4CC75-E672-4A54-B325-1611051ED976/messi-principio-ire-proximo-mundial_98.jpg?crop=1080,608,x0,y54&width=1900&height=1069&optimize=high&format=webply" width="100%" height="300px" alt="Messi Mundial"></div>
+                        <div class="col-md-4 col-sm-12 p-1"><img src="https://www.laprensafederal.com.ar/wp-content/uploads/2021/04/pescadores-deportivos-corrientesjpg.jpg" width="100%" height="300px" alt="Pesca en Esquina"></div>
+                        <div class="col-md-4 col-sm-12 p-1"><img src="https://www.topformacion.es/static/img/reports/report20190204063348w3qam7.jpg" width="100%" height="300px" alt="Codigo web"></div>
+                        <div class="col-md-4 col-sm-12 p-1"><img src="https://cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/SACLNCJ7IVH63AEDKDYTMG3RKA.jpg" width="100%" height="300px" alt="Playa Esquina"></div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="post-tab-pane" role="tabpanel" aria-labelledby="post-tab" tabindex="0">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-8 border border-1 my-2">
+                            <div class="d-flex justify-content-between py-2">
+                                <div><h5>Mis cachorros Labrador Pei! 😍</h5></div>
+                                <div><h5>30/04/2024</h5></div>
+                            </div>
+                            <img src="https://media.graphassets.com/resize=height:404,width:1280/output=format:webp/6wFiLOP4QFmgLubA1IaM?width=1280" width="100%" height="600px" alt="Labrador con Shar Pei">
+                            <div class="mb-2">
+                                <div><h6>204 likes</h6></div>
+                                <div>Es un cruce entre dos perros muy diferentes, el simpático, activo y extrovertido Labrador y el leal, pero más reservado Shar Pei.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8 border border-1 my-2">
+                            <div class="d-flex justify-content-between py-2">
+                                <div><h5>Arrancando la semana</h5></div>
+                                <div><h5>29/04/2024</h5></div>
+                            </div>
+                            <img src="https://nortempo.com/wp-content/uploads/fundacion_personas-1140x760.jpg" width="100%" height="600px" alt="After con amigos">
+                            <div class="mb-2">
+                                <div><h6>315 likes</h6></div>
+                                <div>Los lunes, sí o sí hacemos after con los chicos de la oficina 💪</div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 border border-1 my-2">
+                            <div class="d-flex justify-content-between py-2">
+                                <div><h5>IN-CRE-I-BLE paseo por Ushuaia 😎</h5></div>
+                                <div><h5>28/04/2024</h5></div>
+                            </div>
+                            <img src="https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/mctpahuiyc1gpunvp8s1" width="100%" height="600px" alt="Paseo por Ushuaia">
+                            <div class="mb-2">
+                                <div><h6>610 likes</h6></div>
+                                <div>Un poco de mi paseo por la ciudad más austral del mundo, y las más hermosa!</div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 border border-1 my-2">
+                            <div class="d-flex justify-content-between py-2">
+                                <div><h5>Dale, sacame una casual jaja</h5></div>
+                                <div><h5>28/04/2024</h5></div>
+                            </div>
+                            <img src="https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/63b5cc1f-311b-4a2a-bb2a-8b650dd61994/smartphone/hero-cerificacion-bancaria-mob.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P864E0Q30449MS3000-63b5cc1f-311b-4a2a-bb2a-8b650dd61994-smartphone-ozumTn9" width="100%" height="600px" alt="Saliendo de la oficina">
+                            <div class="mb-2">
+                                <div><h6>122 likes</h6></div>
+                                <div>Aunque no lo parezca, estaba trabajando che! 😋</div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 border border-1 my-2">
+                            <div class="d-flex justify-content-between py-2">
+                                <div><h5>Un domingo de aquellos</h5></div>
+                                <div><h5>28/04/2024</h5></div>
+                            </div>
+                            <img src="https://i.pinimg.com/originals/4f/49/b4/4f49b42e7f38dba45f543246dca08ede.jpg" width="100%" height="600px" alt="Costanera de Corrientes">
+                            <div class="mb-2">
+                                <div><h6>923 likes</h6></div>
+                                <div>Pasamos toda la tarde tomando mates con chipa en la costanera nueva</div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 border border-1 my-2">
+                            <div class="d-flex justify-content-between py-2">
+                                <div><h5>D10S</h5></div>
+                                <div><h5>27/04/2024</h5></div>
+                            </div>
+                            <img src="https://image.ondacero.es/clipping/cmsimages01/2023/06/13/D2A4CC75-E672-4A54-B325-1611051ED976/messi-principio-ire-proximo-mundial_98.jpg?crop=1080,608,x0,y54&width=1900&height=1069&optimize=high&format=webply" width="100%" height="600px" alt="Messi Mundial">
+                            <div class="mb-2">
+                                <div><h6>1010 likes</h6></div>
+                                <div>Leo Messi me dedicó una foto 😂</div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 border border-1 my-2">
+                            <div class="d-flex justify-content-between py-2">
+                                <div><h5>Que más de puede pedir... Dorado y Surubí</h5></div>
+                                <div><h5>24/04/2024</h5></div>
+                            </div>
+                            <img src="https://www.laprensafederal.com.ar/wp-content/uploads/2021/04/pescadores-deportivos-corrientesjpg.jpg" width="100%" height="600px" alt="Pesca en Esquina">
+                            <div class="mb-2">
+                                <div><h6>865 likes</h6></div>
+                                <div>Paso el dato, en la isla, frente a Paso de la Patria!!</div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 border border-1 my-2">
+                            <div class="d-flex justify-content-between py-2">
+                                <div><h5>Plan perfecto para el viernessss!</h5></div>
+                                <div><h5>23/04/2024</h5></div>
+                            </div>
+                            <img src="https://www.topformacion.es/static/img/reports/report20190204063348w3qam7.jpg" width="100%" height="600px" alt="Codigo web">
+                            <div class="mb-2">
+                                <div><h6>785 likes</h6></div>
+                                <div>Aguante 4Geeks! 🙌</div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 border border-1 my-2">
+                            <div class="d-flex justify-content-between py-2">
+                                <div><h5>Esquina, inicio de temporada a full ⛱</h5></div>
+                                <div><h5>23/04/2024</h5></div>
+                            </div>
+                            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/SACLNCJ7IVH63AEDKDYTMG3RKA.jpg" width="100%" height="600px" alt="Playa Esquina">
+                            <div class="mb-2">
+                                <div><h6>1504 likes</h6></div>
+                                <div>La Dirección de Turismo de Esquina (Corrientes), inauguro la temporada de playa 2024!!!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
